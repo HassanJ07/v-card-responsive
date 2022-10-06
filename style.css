@@ -1,0 +1,141 @@
+
+
+
+
+
+*{
+	box-sizing: border-box;
+}
+
+.container{
+	 
+		display: grid; 
+		grid-template-columns: 1fr 1fr 1fr 1fr; 
+		grid-template-rows: 0.2fr 0.7fr 2.5fr 1.4fr 0.2fr; 
+		gap: 0px 0px; 
+		grid-template-areas: 
+		  ". . . ."
+		  "logo-grid image . menu"
+		  ". image text text"
+		  "infos image text text"
+		  ". . . .";
+}
+
+.logo-grid { grid-area: logo-grid; }
+.menu { grid-area: menu; }
+.image { grid-area: image; }
+.text { grid-area: text; }
+.infos { grid-area: infos; }
+
+body{
+	margin: 0;
+}
+
+
+.logo{
+	height: 100px;
+	width: 200px;
+}
+
+.left{
+	height: 100%;
+	width: 20%;
+	background-color: rgb(5,23,38);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	color: white;
+}
+
+
+.profile-image{
+	height: 70%;   
+	box-shadow: 30px 10px 90px -38px;
+	background-image: url(./Assets/photo.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+    justify-content: flex-end;
+    padding-top: 170px;
+}
+
+.center{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.right{
+	height: 100%;
+	width: 45%;
+	
+	padding: 30px;
+	padding-left: 0;
+}
+
+.right-content{
+	
+	height: 100%;
+	/* display: flex; */
+}
+
+.menu-container i{
+	font-size: 50px;
+	cursor: pointer;
+	transition: opacity ease 1s
+}
+
+.menu-container i:hover{
+	opacity: 0.4;
+}
+
+
+.main-infos{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30px;
+}
+
+.btn-left{
+	color: white;
+	background-color: rgb(5,23,38);
+	border-radius: 30px;
+	padding: 10px 15px;
+    border: none;
+
+}
+
+.btn-right{
+	border-radius: 30px;
+	border: solid black 1px;
+	padding: 10px 15px;
+}
+.menu{
+	display: flex;
+	justify-content: flex-end;
+}
+@media screen and (max-width: 375px){
+	
+	.container {
+		display: grid; 
+		grid-template-columns: 1fr 1fr; 
+		grid-template-rows: 0.5fr 1fr 2fr 1fr; 
+		gap: 0px 0px; 
+		grid-template-areas: 
+		  "logo-grid menu"
+		  "image image"
+		  "text text"
+		  "infos infos"; 
+	  }
+
+
+
+	
+
+	
+	
+}

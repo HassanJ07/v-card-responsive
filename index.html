@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>V Card</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="container">
+		<!--<div class="left">-->
+			<img class="logo logo-grid" src="./Assets/logo.png" alt="">
+			<div class="footer infos">
+				<h4>Email</h4>
+				<p>Hassanfakkus7@gmail.com</p>
+
+				<h4>Phone</h4>
+				<p>+32466402618</p>
+
+				<h4>Find Me on</h4>
+				<div class="flex">
+					<i class="fa-brands fa-facebook"></i>
+					<i class="fa-brands fa-instagram"></i>
+					<i class="fa-brands fa-youtube"></i>
+					<i class="fa-brands fa-dribbble"></i>
+				</div>
+			</div>
+		<!--/div><-->
+<!---->
+		<div class="center image">
+			<div class="purple-stuff"></div>
+			<div class="profile-image"></div>
+			<div class="purple-stuff"></div>
+		</div>
+
+		<!-- <div class="right">		 -->
+			<div class="right-content text" >
+				<div class="main-infos">
+					<h1>Hassan <br> <span>Fakkus</span></h1>
+					<h3>Webdev</h3>
+					<p>I'm currently training to be a developper at Becode, i come from video editing and directing all kinds of videos and i've did that for five years and even founded a company with a friend.</p>
+					<div class="flex">
+						<button class="btn-left">PORTFOLIO</button>
+						<button class="btn-right">RESUME</button>
+					</div>
+					
+				</div>
+			</div>
+			<div class="menu-container menu">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+		<!-- </div> -->
+	</div>
+	
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
